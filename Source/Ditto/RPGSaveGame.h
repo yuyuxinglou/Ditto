@@ -51,6 +51,9 @@ public:
 	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = SaveGame)
 	FString UserId;
 
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = SaveGame)
+	bool IsFisrtGame;
+
 protected:
 	/** Deprecated way of storing items, this is read in but not saved out */
 	UPROPERTY()

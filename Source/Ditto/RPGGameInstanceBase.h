@@ -63,9 +63,7 @@ public:
 	UFUNCTION(BlueprintCallable, Category = Save)
 	URPGSaveGame* GetCurrentSaveGame();
 
-	/** Sets rather save/load is enabled. If disabled it will always count as a new character */
-	UFUNCTION(BlueprintCallable, Category = Save)
-	void SetSavingEnabled(bool bEnabled);
+
 
 	/** Synchronously loads a save game. If it fails, it will create a new one for you. Returns true if it loaded, false if it created one */
 	UFUNCTION(BlueprintCallable, Category = Save)
@@ -81,7 +79,7 @@ public:
 
 	/** Writes the current save game object to disk. The save to disk happens in a background thread*/
 	UFUNCTION(BlueprintCallable, Category = Save)
-	bool WriteSaveGame();
+	void WriteSaveGame();
 
 	/** Resets the current save game to it's default. This will erase player data! This won't save to disk until the next WriteSaveGame */
 	UFUNCTION(BlueprintCallable, Category = Save)
@@ -91,11 +89,7 @@ protected:
 	/** The current save game object */
 	UPROPERTY()
 	URPGSaveGame* CurrentSaveGame;
-
-	/** Rather it will attempt to actually save to disk */
-	UPROPERTY()
-	bool bSavingEnabled;
-
+	
 	/** True if we are in the middle of doing a save */
 	UPROPERTY()
 	bool bCurrentlySaving;

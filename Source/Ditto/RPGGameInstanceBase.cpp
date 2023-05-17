@@ -48,16 +48,13 @@ URPGSaveGame* URPGGameInstanceBase::GetCurrentSaveGame()
 	return CurrentSaveGame;
 }
 
-void URPGGameInstanceBase::SetSavingEnabled(bool bEnabled)
-{
-	bSavingEnabled = bEnabled;
-}
+
 
 bool URPGGameInstanceBase::LoadOrCreateSaveGame()
 {
 	URPGSaveGame* LoadedSave = nullptr;
 
-	if (UGameplayStatics::DoesSaveGameExist(SaveSlot, SaveUserIndex) && bSavingEnabled)
+	if (UGameplayStatics::DoesSaveGameExist(SaveSlot, SaveUserIndex))
 	{
 		LoadedSave = Cast<URPGSaveGame>(UGameplayStatics::LoadGameFromSlot(SaveSlot, SaveUserIndex));
 	}
@@ -68,20 +65,14 @@ bool URPGGameInstanceBase::LoadOrCreateSaveGame()
 bool URPGGameInstanceBase::HandleSaveGameLoaded(USaveGame* SaveGameObject)
 {
 	bool bLoaded = false;
-
-	if (!bSavingEnabled)
-	{
-		// If saving is disabled, ignore passed in object
-		SaveGameObject = nullptr;
-	}
-
+	
 	// Replace current save, old object will GC out
 	CurrentSaveGame = Cast<URPGSaveGame>(SaveGameObject);
 
 	if (CurrentSaveGame)
 	{
 		// Make sure it has any newly added default inventory
-		AddDefaultInventory(CurrentSaveGame, false);
+		//AddDefaultInventory(CurrentSaveGame, false);
 		bLoaded = true;
 	}
 	else
@@ -89,7 +80,7 @@ bool URPGGameInstanceBase::HandleSaveGameLoaded(USaveGame* SaveGameObject)
 		// This creates it on demand
 		CurrentSaveGame = Cast<URPGSaveGame>(UGameplayStatics::CreateSaveGameObject(URPGSaveGame::StaticClass()));
 
-		AddDefaultInventory(CurrentSaveGame, true);
+		//AddDefaultInventory(CurrentSaveGame, true);
 	}
 
 	OnSaveGameLoaded.Broadcast(CurrentSaveGame);
@@ -104,25 +95,10 @@ void URPGGameInstanceBase::GetSaveSlotInfo(FString& SlotName, int32& UserIndex) 
 	UserIndex = SaveUserIndex;
 }
 
-bool URPGGameInstanceBase::WriteSaveGame()
+void URPGGameInstanceBase::WriteSaveGame()
 {
-	if (bSavingEnabled)
-	{
-		if (bCurrentlySaving)
-		{
-			// Schedule another save to happen after current one finishes. We only queue one save
-			bPendingSaveRequested = true;
-			return true;
-		}
-
-		// Indicate that we're currently doing an async save
-		bCurrentlySaving = true;
-
-		// This goes off in the background
-		UGameplayStatics::AsyncSaveGameToSlot(GetCurrentSaveGame(), SaveSlot, SaveUserIndex, FAsyncSaveGameToSlotDelegate::CreateUObject(this, &URPGGameInstanceBase::HandleAsyncSave));
-		return true;
-	}
-	return false;
+	// This goes off in the background
+	UGameplayStatics::AsyncSaveGameToSlot(GetCurrentSaveGame(), SaveSlot, SaveUserIndex, FAsyncSaveGameToSlotDelegate::CreateUObject(this, &URPGGameInstanceBase::HandleAsyncSave));
 }
 
 void URPGGameInstanceBase::ResetSaveGame()

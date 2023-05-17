@@ -588,102 +588,6 @@
 			"Type": "DynamicLibrary"
 		},
 		{
-			"Path": "$(EngineDir)/Plugins/Marketplace/VoxelPluginPro/Binaries/Win64/UE4Editor-Voxel.dll",
-			"Type": "DynamicLibrary"
-		},
-		{
-			"Path": "$(EngineDir)/Plugins/Marketplace/VoxelPluginPro/Binaries/Win64/UE4Editor-Voxel.pdb",
-			"Type": "SymbolFile"
-		},
-		{
-			"Path": "$(EngineDir)/Plugins/Marketplace/VoxelPluginPro/Binaries/Win64/UE4Editor-VoxelGraph.dll",
-			"Type": "DynamicLibrary"
-		},
-		{
-			"Path": "$(EngineDir)/Plugins/Marketplace/VoxelPluginPro/Binaries/Win64/UE4Editor-VoxelGraph.pdb",
-			"Type": "SymbolFile"
-		},
-		{
-			"Path": "$(EngineDir)/Plugins/Marketplace/VoxelPluginPro/Binaries/Win64/UE4Editor-VoxelFoliage.dll",
-			"Type": "DynamicLibrary"
-		},
-		{
-			"Path": "$(EngineDir)/Plugins/Marketplace/VoxelPluginPro/Binaries/Win64/UE4Editor-VoxelFoliage.pdb",
-			"Type": "SymbolFile"
-		},
-		{
-			"Path": "$(EngineDir)/Plugins/Marketplace/VoxelPluginPro/Binaries/Win64/UE4Editor-VoxelHelpers.dll",
-			"Type": "DynamicLibrary"
-		},
-		{
-			"Path": "$(EngineDir)/Plugins/Marketplace/VoxelPluginPro/Binaries/Win64/UE4Editor-VoxelHelpers.pdb",
-			"Type": "SymbolFile"
-		},
-		{
-			"Path": "$(EngineDir)/Plugins/Marketplace/VoxelPluginPro/Binaries/Win64/UE4Editor-VoxelVDB.dll",
-			"Type": "DynamicLibrary"
-		},
-		{
-			"Path": "$(EngineDir)/Plugins/Marketplace/VoxelPluginPro/Binaries/Win64/UE4Editor-VoxelVDB.pdb",
-			"Type": "SymbolFile"
-		},
-		{
-			"Path": "$(EngineDir)/Plugins/Marketplace/VoxelPluginPro/Binaries/Win64/UE4Editor-VoxelVDBEditor.dll",
-			"Type": "DynamicLibrary"
-		},
-		{
-			"Path": "$(EngineDir)/Plugins/Marketplace/VoxelPluginPro/Binaries/Win64/UE4Editor-VoxelVDBEditor.pdb",
-			"Type": "SymbolFile"
-		},
-		{
-			"Path": "$(EngineDir)/Plugins/Marketplace/VoxelPluginPro/Binaries/Win64/UE4Editor-VoxelNiagara.dll",
-			"Type": "DynamicLibrary"
-		},
-		{
-			"Path": "$(EngineDir)/Plugins/Marketplace/VoxelPluginPro/Binaries/Win64/UE4Editor-VoxelNiagara.pdb",
-			"Type": "SymbolFile"
-		},
-		{
-			"Path": "$(EngineDir)/Plugins/Marketplace/VoxelPluginPro/Binaries/Win64/UE4Editor-VoxelEditor.dll",
-			"Type": "DynamicLibrary"
-		},
-		{
-			"Path": "$(EngineDir)/Plugins/Marketplace/VoxelPluginPro/Binaries/Win64/UE4Editor-VoxelEditor.pdb",
-			"Type": "SymbolFile"
-		},
-		{
-			"Path": "$(EngineDir)/Plugins/Marketplace/VoxelPluginPro/Binaries/Win64/UE4Editor-VoxelGraphEditor.dll",
-			"Type": "DynamicLibrary"
-		},
-		{
-			"Path": "$(EngineDir)/Plugins/Marketplace/VoxelPluginPro/Binaries/Win64/UE4Editor-VoxelGraphEditor.pdb",
-			"Type": "SymbolFile"
-		},
-		{
-			"Path": "$(EngineDir)/Plugins/Marketplace/VoxelPluginPro/Binaries/Win64/UE4Editor-VoxelEditorDefault.dll",
-			"Type": "DynamicLibrary"
-		},
-		{
-			"Path": "$(EngineDir)/Plugins/Marketplace/VoxelPluginPro/Binaries/Win64/UE4Editor-VoxelEditorDefault.pdb",
-			"Type": "SymbolFile"
-		},
-		{
-			"Path": "$(EngineDir)/Plugins/Marketplace/VoxelPluginPro/Binaries/Win64/UE4Editor-VoxelExamples.dll",
-			"Type": "DynamicLibrary"
-		},
-		{
-			"Path": "$(EngineDir)/Plugins/Marketplace/VoxelPluginPro/Binaries/Win64/UE4Editor-VoxelExamples.pdb",
-			"Type": "SymbolFile"
-		},
-		{
-			"Path": "$(EngineDir)/Plugins/Marketplace/VoxelPluginPro/Binaries/Win64/UE4Editor-VoxelLegacySpawners.dll",
-			"Type": "DynamicLibrary"
-		},
-		{
-			"Path": "$(EngineDir)/Plugins/Marketplace/VoxelPluginPro/Binaries/Win64/UE4Editor-VoxelLegacySpawners.pdb",
-			"Type": "SymbolFile"
-		},
-		{
 			"Path": "$(EngineDir)/Plugins/Media/AndroidMedia/Binaries/Win64/UE4Editor-AndroidMediaEditor.dll",
 			"Type": "DynamicLibrary"
 		},
@@ -2832,10 +2736,6 @@
 			"Type": "RequiredResource"
 		},
 		{
-			"Path": "$(EngineDir)/Plugins/Marketplace/VoxelPluginPro/Binaries/Win64/UE4Editor.modules",
-			"Type": "RequiredResource"
-		},
-		{
 			"Path": "$(EngineDir)/Plugins/Media/AndroidMedia/Binaries/Win64/UE4Editor.modules",
 			"Type": "RequiredResource"
 		},
@@ -3339,10 +3239,6 @@
 		},
 		{
 			"Path": "$(EngineDir)/Plugins/Lumin/MagicLeapLightEstimation/MagicLeapLightEstimation.uplugin",
-			"Type": "UFS"
-		},
-		{
-			"Path": "$(EngineDir)/Plugins/Marketplace/VoxelPluginPro/VoxelPro.uplugin",
 			"Type": "UFS"
 		},
 		{
@@ -20491,18 +20387,6 @@
 		},
 		{
 			"Path": "$(EngineDir)/Binaries/Win64/tbb12.dll",
-			"Type": "NonUFS"
-		},
-		{
-			"Path": "$(EngineDir)/Plugins/Marketplace/VoxelPluginPro/Source/ThirdParty/VoxelEmbree3/Win64/lib/embree3.dll",
-			"Type": "NonUFS"
-		},
-		{
-			"Path": "$(EngineDir)/Plugins/Marketplace/VoxelPluginPro/Source/ThirdParty/VoxelEmbree3/Win64/lib/tbb.dll",
-			"Type": "NonUFS"
-		},
-		{
-			"Path": "$(EngineDir)/Plugins/Marketplace/VoxelPluginPro/Source/ThirdParty/VoxelEmbree3/Win64/lib/tbbmalloc.dll",
 			"Type": "NonUFS"
 		},
 		{

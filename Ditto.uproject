@@ -19,14 +19,12 @@
 			"Enabled": true
 		},
 		{
-			"Name": "MySQL",
-			"Enabled": false,
-			"MarketplaceURL": "com.epicgames.launcher://ue/marketplace/content/4a497572d1014beab577112d5a37c813"
+			"Name": "Test",
+			"Enabled": false
 		},
 		{
-			"Name": "SimpleSQLite",
-			"Enabled": false,
-			"MarketplaceURL": "com.epicgames.launcher://ue/marketplace/product/e9f2d8133a524268ba723a881895104d"
+			"Name": "OnlineSubsystemSteam",
+			"Enabled": true
 		}
 	]
 }

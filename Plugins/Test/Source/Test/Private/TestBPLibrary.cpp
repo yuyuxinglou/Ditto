@@ -33,21 +33,21 @@ bool UTestBPLibrary::OpenMysql()
 			{
 				while (MYSQL_ROW sql_row= mysql_fetch_row(result))
 				{
-					GEngine->AddOnScreenDebugMessage(-1,10,FColor::Red,*FString::Printf(TEXT("ID %s "),ANSI_TO_TCHAR(sql_row[0])));
+					// GEngine->AddOnScreenDebugMessage(-1,10,FColor::Red,*FString::Printf(TEXT("ID %s "),ANSI_TO_TCHAR(sql_row[0])));
 				}
 				
 			}
 		}
 		else
 		{
-			GEngine->AddOnScreenDebugMessage(-1,10,FColor::Red,*FString::Printf(TEXT("Query sql Failed")));
-			GEngine->AddOnScreenDebugMessage(-1,10,FColor::Red,mysql_error(&mysql));
+			// GEngine->AddOnScreenDebugMessage(-1,10,FColor::Red,*FString::Printf(TEXT("Query sql Failed")));
+			// GEngine->AddOnScreenDebugMessage(-1,10,FColor::Red,mysql_error(&mysql));
 		}
 	}
 	else
 	{
-		GEngine->AddOnScreenDebugMessage(-1,10,FColor::Red,*FString::Printf(TEXT("Connect sql Failed")));
-		GEngine->AddOnScreenDebugMessage(-1,10,FColor::Red,mysql_error(&mysql));
+		// GEngine->AddOnScreenDebugMessage(-1,10,FColor::Red,*FString::Printf(TEXT("Connect sql Failed")));
+		// GEngine->AddOnScreenDebugMessage(-1,10,FColor::Red,mysql_error(&mysql));
 	}
 	
 	if(result != nullptr)
