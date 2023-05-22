@@ -18,7 +18,7 @@ public class Ditto : ModuleRules
 			"GameplayAbilities",
 			"GameplayTags",
 			"GameplayTasks",
-			"AIModule",
+			"AIModule", "SQLiteSupport",
 		});
 
 		// Uncomment if you are using Slate UI
